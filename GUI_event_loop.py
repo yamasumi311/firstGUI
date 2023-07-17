@@ -53,4 +53,11 @@ def move_character(event):
 # bind left button mouse to moving the character
 canvas.bind_all('<Button-1>', move_character)
 
+
+user_data = Entry(window, text='') # initial entry is blank
+user_data.pack()
+
+
+
+
 window.mainloop()
