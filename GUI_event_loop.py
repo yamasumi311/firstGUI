@@ -35,4 +35,15 @@ img = PhotoImage(file='greenChar.gif')
 # use image object to create a canvas image at position 100,100
 mycar = canvas.create_image(100,100,image = img)
 
+# move circle to left or right based on keys
+def move_circle(event):
+    key = event.keysym
+    if key == 'Right':
+        canvas.move(circle,10,0) # change x
+    elif key == 'Left':
+        canvas.move(circle,-10,0) # change x
+
+# bind keyboard input to move_circle
+canvas.bind_all('<Key>', move_circle)
+
 window.mainloop()
